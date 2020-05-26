@@ -1,0 +1,19 @@
+{
+  "name": "sturdy-umbrella",
+  "version": "0.1.0",
+  "repository": "https://github.com/menkuichan/sturdy-umbrella.git",
+  "author": "menkuichan <ilonaspolding@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next ./docs",
+    "build": "next build",
+    "start": "next start"
+  },
+  "description": "Tool for developing UI components in isolation for React.",
+  "dependencies": {
+    "next": "^9.4.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {}
+}
