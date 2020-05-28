@@ -22,7 +22,7 @@ module.exports = {
       ],
     });
 
-    config.resolve.alias['my-components'] = path.join(__dirname, './components');
+    config.resolve.alias.components = path.join(__dirname, './components');
 
     return config;
   },

@@ -1,10 +1,15 @@
-import Checkbox from 'my-components/Checkbox';
-import TextField from 'my-components/TextField';
+import { Checkbox, TextField } from 'components';
+import SideMenu from '../components/SideMenu';
+import Header from '../components/Header'
+import { MainContainer, MdxContainer } from './styles'
 
-## Simple TextField component!
-
-<TextField />
-
-## Simple Checkbox component!
-
-<Checkbox />
+<MainContainer>
+  <SideMenu />
+  <MdxContainer>
+    <Header />
+    <div>
+      <Checkbox />
+      <TextField />
+    </div>
+  </MdxContainer>
+</MainContainer>
