@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const MdxContainer = styled.div`
-
 `;
 
 export const MainContainer = styled.div`
