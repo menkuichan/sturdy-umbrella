@@ -1,9 +1,11 @@
 import React from 'react';
 import { Item, MenuContainer } from './styles';
 
-const SideMenu = () => (
+const SideMenu = ({ children }) => (
   <MenuContainer>
-    <Item>side menu</Item>
+    {children.map((link) => (
+      <Item>{link}</Item>
+    ))}
   </MenuContainer>
 );
 
