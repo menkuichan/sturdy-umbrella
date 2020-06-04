@@ -1,10 +1,11 @@
 import React from 'react';
-import { Item } from './styles';
+import { HeaderContainer, Item } from './styles';
 
-const Header = () => (
-  <header>
-    <Item>Component 1</Item>
-  </header>
+const Header = ({ onThemeChange }) => (
+  <HeaderContainer>
+    <Item onClick={() => onThemeChange('light')}>Light theme</Item>
+    <Item onClick={() => onThemeChange('dark')}>Dark theme</Item>
+  </HeaderContainer>
 );
 
 export default Header;
