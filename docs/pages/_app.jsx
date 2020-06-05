@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import Link from 'next/link';
 import SideMenu from '../components/SideMenu';
@@ -12,12 +13,13 @@ import {
 import lightTheme from '../themes/light';
 import darkTheme from '../themes/dark';
 import GlobalStyle from '../themes/global';
+import { theme } from '../../constants';
 
-function MyApp({ Component }) {
-  const [theme, setTheme] = useState('dark');
+function App({ Component }) {
+  const [currentTheme, setTheme] = useState('dark');
 
   return (
-    <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+    <ThemeProvider theme={currentTheme === theme.dark ? darkTheme : lightTheme}>
       <GlobalStyle />
       <AppContainer>
         <SideMenu>
@@ -43,4 +45,8 @@ function MyApp({ Component }) {
   );
 }
 
-export default MyApp;
+App.propTypes = {
+  Component: PropTypes.node.isRequired,
+};
+
+export default App;

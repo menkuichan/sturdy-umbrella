@@ -15,9 +15,12 @@ export const AppContainer = styled.div`
 `;
 
 export const LinkText = styled.a`
+  color: ${(props) => props.theme.sideMenu.linkColor};
   text-decoration: none;
   color: inherit;
   text-decoration: inherit;
+  font-size: 17px;
+  padding: 20px 25px 0;
 `;
 
 export const MainContainer = styled.div`

@@ -13,7 +13,7 @@ export const Item = styled.button`
   &:hover {
     background-color: ${(props) => props.theme.header.buttonHover};
     border-color: none;
-}
+  }
 `;
 
 export const HeaderContainer = styled.header`
