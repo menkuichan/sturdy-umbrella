@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "next ./docs",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build ./docs",
+    "start": "next start ./docs"
   },
   "description": "Tool for developing UI components in isolation for React.",
   "dependencies": {
