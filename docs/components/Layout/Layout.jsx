@@ -8,12 +8,7 @@ import SideMenu from '../SideMenu';
 import lightTheme from '../../themes/light';
 import darkTheme from '../../themes/dark';
 import { theme } from '../../../constants';
-import {
-  MainContainer,
-  AppContainer,
-  MdxContainer,
-  LinkText,
-} from './styles';
+import { MainContainer, AppContainer, MdxContainer, LinkText } from './styles';
 
 const Layout = ({ children }) => {
   const [currentTheme, setTheme] = useState('dark');
@@ -23,10 +18,10 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <AppContainer>
         <SideMenu>
-          <Link href="/TextField" as="/TextField">
+          <Link href="/TextField" as={`${process.env.ASSET_PREFIX}/TextField`}>
             <LinkText href="/TextField">TextField</LinkText>
           </Link>
-          <Link href="/Checkbox" as="/Checkbox">
+          <Link href="/Checkbox" as={`${process.env.ASSET_PREFIX}/Checkbox`}>
             <LinkText href="/Checkbox">Checkbox</LinkText>
           </Link>
         </SideMenu>
@@ -36,9 +31,7 @@ const Layout = ({ children }) => {
               setTheme(type);
             }}
           />
-          <MdxContainer>
-            {children}
-          </MdxContainer>
+          <MdxContainer>{children}</MdxContainer>
         </MainContainer>
       </AppContainer>
     </ThemeProvider>

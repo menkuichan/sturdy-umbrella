@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next ./docs",
-    "build": "next build ./docs",
+    "build": "next build ./docs && next export ./docs",
     "start": "next start ./docs"
   },
   "description": "Tool for developing UI components in isolation for React.",
