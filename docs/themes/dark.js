@@ -1,14 +1,13 @@
 export default {
   sideMenu: {
-    backgroundColor: '#333333',
-    linkColor: '#FCFAF9',
+    backgroundColor: '#2f2f2f',
+    linkColor: '#ffffff',
   },
   mdxContent: {
-    backgroundColor: '#666666',
-    textColor: '#FFFFFF',
+    backgroundColor: '#252525',
+    textColor: '#ffffff',
   },
   header: {
-    backgroundColor: '#A19AAF',
-    buttonHover: '#9993A5',
+    textColor: '#ffffff',
   },
 };

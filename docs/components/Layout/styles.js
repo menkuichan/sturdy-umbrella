@@ -19,10 +19,12 @@ export const LinkText = styled.a`
   text-decoration: none;
   color: inherit;
   text-decoration: inherit;
-  font-size: 17px;
+  font-weight: bold;
+  font-size: 15px;
   padding: 20px 25px 0;
 `;
 
 export const MainContainer = styled.div`
   width: 100%;
+  padding: 40px 20% 0 10%;
 `;
