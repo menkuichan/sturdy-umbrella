@@ -8,6 +8,7 @@ export const PopoverContainer = styled.div`
   left: 50%;
   top: 28px;
   transform: translateX(-50%);
+  border-radius: 6px;
 
   &::before {
     content: '';

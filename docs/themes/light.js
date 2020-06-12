@@ -10,4 +10,7 @@ export default {
   header: {
     textColor: '#000000',
   },
+  popover: {
+    itemHoverColor: '#f7f7f7',
+  },
 };

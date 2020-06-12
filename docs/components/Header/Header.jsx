@@ -2,26 +2,36 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Popover from '../Popover';
 import { theme } from '../../../constants';
-import { HeaderContainer, ThemeItem, ThemeButton } from './styles';
+import {
+  HeaderContainer,
+  ThemeItem,
+  ThemeButton,
+  HeaderItem,
+  ThemeButtonContainer,
+} from './styles';
 
 const Header = ({ onThemeChange }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <HeaderContainer>
-      <ThemeButton type="button" onClick={() => setOpen(!open)}>
-        Theme
-      </ThemeButton>
-      {open && (
-        <Popover>
-          <ThemeItem onClick={() => onThemeChange(theme.light)}>
-            Light theme
-          </ThemeItem>
-          <ThemeItem onClick={() => onThemeChange(theme.dark)}>
-            Dark theme
-          </ThemeItem>
-        </Popover>
-      )}
+      <HeaderItem>
+        <ThemeButton type="button" onClick={() => setOpen(!open)}>
+          Theme
+        </ThemeButton>
+        {open && (
+          <Popover>
+            <ThemeButtonContainer>
+              <ThemeItem onClick={() => onThemeChange(theme.light)}>
+                Light
+              </ThemeItem>
+              <ThemeItem onClick={() => onThemeChange(theme.dark)}>
+                Dark
+              </ThemeItem>
+            </ThemeButtonContainer>
+          </Popover>
+        )}
+      </HeaderItem>
     </HeaderContainer>
   );
 };
