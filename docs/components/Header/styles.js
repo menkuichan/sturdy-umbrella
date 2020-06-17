@@ -6,11 +6,12 @@ export const ThemeItem = styled.button`
   background: inherit;
   outline: none;
   border: none;
-  padding: 5px;
+  color: ${(props) => props.theme.header.textColor};
+  padding: 5px 15px;
 
-  /* &:hover {
+  &&:hover {
     background-color: ${(props) => props.theme.popover.itemHoverColor};
-  } */
+  }
 `;
 
 export const ThemeButton = styled.button`
@@ -18,15 +19,15 @@ export const ThemeButton = styled.button`
   outline: none;
   border: none;
   color: ${(props) => props.theme.header.textColor};
+
+  &&:hover {
+    color: ${(props) => props.theme.header.textHoverColor};
+  }
 `;
 
 export const ThemeButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 70px;
-  height: 50px;
-  justify-content: space-between;
 `;
 
 export const HeaderContainer = styled.header`
