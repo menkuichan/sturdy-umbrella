@@ -11,7 +11,7 @@ export const PopoverContainer = styled.div`
   transform: translateX(-50%);
   border-radius: 6px;
 
-  &::before {
+  &:before {
     content: '';
     display: inline-block;
     position: absolute;

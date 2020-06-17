@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CheckboxContainer, Input, Label } from './styles';
 
 const Checkbox = ({ label, invalid, disabled }) => (
-  <div>
-    <input
+  <CheckboxContainer>
+    <Input
       type="checkbox"
       id="checkbox"
       disabled={disabled}
       invalid={invalid}
     />
-    <label htmlFor="checkbox">{label}</label>
-  </div>
+    <Label htmlFor="checkbox" invalid={invalid}>
+      {label}
+    </Label>
+  </CheckboxContainer>
 );
 
 Checkbox.defaultProps = {

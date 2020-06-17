@@ -9,7 +9,7 @@ export const ThemeItem = styled.button`
   color: ${(props) => props.theme.header.textColor};
   padding: 5px 15px;
 
-  &&:hover {
+  &:hover {
     background-color: ${(props) => props.theme.popover.itemHoverColor};
   }
 `;
@@ -20,7 +20,7 @@ export const ThemeButton = styled.button`
   border: none;
   color: ${(props) => props.theme.header.textColor};
 
-  &&:hover {
+  &:hover {
     color: ${(props) => props.theme.header.textHoverColor};
   }
 `;

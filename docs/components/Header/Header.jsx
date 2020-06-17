@@ -20,7 +20,7 @@ const Header = ({ onThemeChange }) => {
           Theme
         </ThemeButton>
         {open && (
-          <Popover>
+          <Popover onItemClick={() => setOpen(!open)}>
             <ThemeButtonContainer>
               <ThemeItem onClick={() => onThemeChange(theme.light)}>
                 Light

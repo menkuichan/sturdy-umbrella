@@ -16,4 +16,14 @@ export default {
     borderShadowColor: 'rgba(0, 0, 35, 0.5)',
     triangleColor: 'rgba(0, 0, 35, 0.2)',
   },
+  checkbox: {
+    invalidColor: '#f65c65',
+    labelColor: '#000000',
+  },
+  textField: {
+    borderColor: '#E3E3E3',
+    focusedBorderColor: '#2290ea',
+    invalidColor: '#f65c65',
+    textColor: '#000000',
+  },
 };
