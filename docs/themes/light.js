@@ -1,14 +1,31 @@
 export default {
   sideMenu: {
-    backgroundColor: '#998DA0',
+    backgroundColor: '#fafafa',
     linkColor: '#FCFCFC',
   },
   mdxContent: {
-    backgroundColor: '#FBFBFC',
-    textColor: '#000000',
+    backgroundColor: '#ffffff',
+    textColor: '#2c2c2c',
   },
   header: {
-    backgroundColor: '#E8E8EE',
-    buttonHover: '#E8E1E5',
+    textColor: '#595959',
+    textHoverColor: '#000000',
+  },
+  popover: {
+    itemHoverColor: '#f7f7f7',
+    borderShadowColor: 'rgba(0, 0, 35, 0.5)',
+    triangleColor: 'rgba(0, 0, 35, 0.2)',
+  },
+  checkbox: {
+    invalidColor: '#f65c65',
+    disabledColor: '#cacaca',
+    labelColor: '#4F4F4F',
+    checkedColor: '#0b76ef',
+  },
+  textField: {
+    borderColor: '#E3E3E3',
+    focusedBorderColor: '#2290ea',
+    invalidColor: '#f65c65',
+    textColor: '#000000',
   },
 };
