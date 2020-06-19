@@ -18,7 +18,8 @@ export default {
   },
   checkbox: {
     invalidColor: '#f65c65',
-    labelColor: '#000000',
+    disabledColor: '#cacaca',
+    labelColor: '#4F4F4F',
   },
   textField: {
     borderColor: '#E3E3E3',

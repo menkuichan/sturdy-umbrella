@@ -4,13 +4,8 @@ import { CheckboxContainer, Input, Label } from './styles';
 
 const Checkbox = ({ label, invalid, disabled }) => (
   <CheckboxContainer>
-    <Input
-      type="checkbox"
-      id="checkbox"
-      disabled={disabled}
-      invalid={invalid}
-    />
-    <Label htmlFor="checkbox" invalid={invalid}>
+    <Input type="checkbox" id={label} disabled={disabled} invalid={invalid} />
+    <Label htmlFor={label} disabled={disabled} invalid={invalid}>
       {label}
     </Label>
   </CheckboxContainer>
