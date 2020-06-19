@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Popover from '../Popover';
-import { theme } from '../../../constants';
+import useOutsideClick from '../../hooks/useOutsideClick';
+import { theme, EVENT_TYPE } from '../../../constants';
 import {
   HeaderContainer,
   ThemeItem,
@@ -12,9 +13,11 @@ import {
 
 const Header = ({ onThemeChange }) => {
   const [open, setOpen] = useState(false);
+  const wrapperRef = useRef(null);
+  useOutsideClick(wrapperRef, () => setOpen(false), EVENT_TYPE.MOUSEDOWN);
 
   return (
-    <HeaderContainer>
+    <HeaderContainer ref={wrapperRef}>
       <HeaderItem>
         <ThemeButton type="button" onClick={() => setOpen(!open)}>
           Theme
