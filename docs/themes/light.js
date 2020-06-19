@@ -20,6 +20,7 @@ export default {
     invalidColor: '#f65c65',
     disabledColor: '#cacaca',
     labelColor: '#4F4F4F',
+    checkedColor: '#0b76ef',
   },
   textField: {
     borderColor: '#E3E3E3',
