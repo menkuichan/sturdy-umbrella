@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import Link from 'next/link';
@@ -11,7 +11,14 @@ import { theme } from '../../../constants';
 import { MainContainer, AppContainer, MdxContainer, LinkText } from './styles';
 
 const Layout = ({ children }) => {
-  const [currentTheme, setTheme] = useState('dark');
+  const [currentTheme, setTheme] = useState(theme.dark);
+
+  useEffect(() => {
+    const storedTheme = sessionStorage.getItem('theme');
+    if (storedTheme !== currentTheme) {
+      setTheme(storedTheme);
+    }
+  }, []);
 
   return (
     <ThemeProvider theme={currentTheme === theme.dark ? darkTheme : lightTheme}>
@@ -28,6 +35,7 @@ const Layout = ({ children }) => {
         <MainContainer>
           <Header
             onThemeChange={(type) => {
+              sessionStorage.setItem('theme', type);
               setTheme(type);
             }}
           />
