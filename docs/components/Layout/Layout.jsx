@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     const storedTheme = sessionStorage.getItem('theme');
-    if (storedTheme !== currentTheme) {
+    if (storedTheme && storedTheme !== currentTheme) {
       setTheme(storedTheme);
     }
   }, []);
