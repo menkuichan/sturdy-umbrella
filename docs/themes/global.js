@@ -5,4 +5,8 @@ export default createGlobalStyle`
     color: ${(props) => props.theme.mdxContent.textColor};
     background-color: ${(props) => props.theme.mdxContent.backgroundColor};
   }
+
+  * {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
 `;
