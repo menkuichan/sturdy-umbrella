@@ -1,12 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Head from 'next/head';
 import Layout from '../components/Layout';
 
 function App({ Component }) {
   return (
-    <Layout>
-      <Component />
-    </Layout>
+    <>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <Layout>
+        <Component />
+      </Layout>
+    </>
   );
 }
 
