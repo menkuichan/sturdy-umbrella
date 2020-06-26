@@ -13,7 +13,7 @@ import { MainContainer, AppContainer, MdxContainer, LinkText } from './styles';
 
 const Layout = ({ children }) => {
   const [currentTheme, setTheme] = useState(theme.dark);
-  let autoTheme = false;
+  const [autoTheme, setAutoTheme] = useState(false);
 
   const saveTheme = (type) => {
     setTheme(type);
@@ -22,10 +22,10 @@ const Layout = ({ children }) => {
 
   const checkTheme = (type) => {
     if (type === theme.auto) {
-      autoTheme = true;
+      setAutoTheme(true);
       saveTheme(getAutoTheme());
     } else {
-      autoTheme = false;
+      setAutoTheme(false);
       saveTheme(type);
     }
   };
