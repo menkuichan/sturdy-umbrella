@@ -12,28 +12,36 @@ import { theme } from '../../../constants';
 import { MainContainer, AppContainer, MdxContainer, LinkText } from './styles';
 
 const Layout = ({ children }) => {
-  const [currentTheme, setTheme] = useState('dark');
+  const [currentTheme, setTheme] = useState(theme.dark);
   let autoTheme = false;
+
+  const saveTheme = (type) => {
+    setTheme(type);
+    sessionStorage.setItem('theme', type);
+  };
 
   const checkTheme = (type) => {
     if (type === theme.auto) {
-      console.log('auto type');
       autoTheme = true;
-      setTheme(getAutoTheme());
+      saveTheme(getAutoTheme());
     } else {
-      console.log('other type');
       autoTheme = false;
-      setTheme(type);
+      saveTheme(type);
     }
   };
 
   useEffect(() => {
-    console.log('what');
     if (autoTheme) {
-      console.log('try auto theme');
-      setTheme(getAutoTheme());
+      saveTheme(getAutoTheme());
     }
   }, [children]);
+
+  useEffect(() => {
+    const storedTheme = sessionStorage.getItem('theme');
+    if (storedTheme && storedTheme !== currentTheme) {
+      setTheme(storedTheme);
+    }
+  }, []);
 
   return (
     <ThemeProvider theme={currentTheme === theme.dark ? darkTheme : lightTheme}>
