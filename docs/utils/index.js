@@ -3,7 +3,7 @@ import SunCalc from 'suncalc';
 import isWithinInterval from 'date-fns/isWithinInterval';
 import { theme } from '../../constants';
 
-export const checkTheme = () => {
+export const getAutoTheme = () => {
   const currentDate = new Date();
   let currentLatitude = '';
   let currentLongitude = '';

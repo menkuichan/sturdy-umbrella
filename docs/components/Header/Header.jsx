@@ -25,12 +25,11 @@ const Header = ({ onThemeChange }) => {
         {open && (
           <Popover onItemClick={() => setOpen(!open)}>
             <ThemeButtonContainer>
-              <ThemeItem onClick={() => onThemeChange(theme.light)}>
-                Light
-              </ThemeItem>
-              <ThemeItem onClick={() => onThemeChange(theme.dark)}>
-                Dark
-              </ThemeItem>
+              {Object.keys(theme).map((item) => (
+                <ThemeItem onClick={() => onThemeChange(item)}>
+                  {item}
+                </ThemeItem>
+              ))}
             </ThemeButtonContainer>
           </Popover>
         )}
