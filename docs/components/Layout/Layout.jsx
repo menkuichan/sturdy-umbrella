@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
     if (autoTheme) {
       saveTheme(getAutoTheme());
     }
-  }, [children]);
+  });
 
   useEffect(() => {
     const storedTheme = sessionStorage.getItem('theme');
