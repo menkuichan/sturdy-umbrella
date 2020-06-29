@@ -1,30 +1,17 @@
 /* eslint-disable import/prefer-default-export */
-import SunCalc from 'suncalc';
-import isWithinInterval from 'date-fns/isWithinInterval';
+import { isWithinInterval, setHours } from 'date-fns';
 import { theme } from '../../constants';
 
 export const getAutoTheme = () => {
   const currentDate = new Date();
-  let currentLatitude = '';
-  let currentLongitude = '';
-
-  navigator.geolocation.getCurrentPosition(
-    ({ coords: { latitude, longitude } }) => {
-      currentLatitude = latitude;
-      currentLongitude = longitude;
-    }
-  );
-
-  const { sunrise, sunset } = SunCalc.getTimes(
-    currentDate,
-    currentLatitude,
-    currentLongitude
-  );
+  const dayStart = setHours(currentDate, 9);
+  const dayEnd = setHours(currentDate, 21);
 
   const isDayTime = isWithinInterval(currentDate, {
-    start: sunrise,
-    end: sunset,
+    start: dayStart,
+    end: dayEnd,
   });
+
   if (isDayTime) {
     return theme.light;
   }
