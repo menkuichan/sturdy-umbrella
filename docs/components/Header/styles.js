@@ -4,6 +4,7 @@ export const ThemeItem = styled.button`
   color: #ffffff;
   font-size: 14px;
   background: inherit;
+  text-transform: capitalize;
   outline: none;
   border: none;
   color: ${(props) => props.theme.header.textColor};

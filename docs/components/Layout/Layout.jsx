@@ -7,11 +7,34 @@ import Header from '../Header';
 import SideMenu from '../SideMenu';
 import lightTheme from '../../themes/light';
 import darkTheme from '../../themes/dark';
+import { getAutoTheme } from '../../utils';
 import { theme } from '../../../constants';
 import { MainContainer, AppContainer, MdxContainer, LinkText } from './styles';
 
 const Layout = ({ children }) => {
   const [currentTheme, setTheme] = useState(theme.dark);
+  const [autoTheme, setAutoTheme] = useState(false);
+
+  const saveTheme = (type) => {
+    setTheme(type);
+    sessionStorage.setItem('theme', type);
+  };
+
+  const checkTheme = (type) => {
+    if (type === theme.auto) {
+      setAutoTheme(true);
+      saveTheme(getAutoTheme());
+    } else {
+      setAutoTheme(false);
+      saveTheme(type);
+    }
+  };
+
+  useEffect(() => {
+    if (autoTheme) {
+      saveTheme(getAutoTheme());
+    }
+  });
 
   useEffect(() => {
     const storedTheme = sessionStorage.getItem('theme');
@@ -35,8 +58,7 @@ const Layout = ({ children }) => {
         <MainContainer>
           <Header
             onThemeChange={(type) => {
-              sessionStorage.setItem('theme', type);
-              setTheme(type);
+              checkTheme(type);
             }}
           />
           <MdxContainer>{children}</MdxContainer>
