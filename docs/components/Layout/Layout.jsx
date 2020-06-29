@@ -60,6 +60,8 @@ const Layout = ({ children }) => {
             onThemeChange={(type) => {
               checkTheme(type);
             }}
+            currentTheme={currentTheme}
+            autoTheme={autoTheme}
           />
           <MdxContainer>{children}</MdxContainer>
         </MainContainer>
