@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const TextFieldContainer = styled.div``;
 
 export const Input = styled.input`
-  background-color: inherit;
+  background-color: ${(props) =>
+    props.disabled ? props.theme.textField.disabledBackgroundColor : 'inherit'};
   border-radius: 3px;
   padding: 5px;
   border: 1px solid
@@ -24,5 +25,7 @@ export const Input = styled.input`
 
   &::placeholder {
     font-style: italic;
+    color: ${(props) =>
+      props.disabled && props.theme.textField.disabledTextColor};
   }
 `;

@@ -7,7 +7,7 @@ export const PopoverContainer = styled.div`
   box-shadow: 0 0 2px ${(props) => props.theme.popover.borderShadowColor};
   position: absolute;
   left: 50%;
-  top: 28px;
+  top: 39px;
   transform: translateX(-50%);
   border-radius: 6px;
 
