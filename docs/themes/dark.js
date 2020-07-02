@@ -27,5 +27,7 @@ export default {
     focusedBorderColor: '#2290ea',
     invalidColor: '#f65c65',
     textColor: '#ffffff',
+    disabledBackgroundColor: '#3e3e3e',
+    disabledTextColor: '#B0B0B0',
   },
 };

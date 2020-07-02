@@ -21,7 +21,7 @@ const Header = ({ onThemeChange, currentTheme, autoTheme }) => {
     <HeaderContainer ref={wrapperRef}>
       <HeaderItem>
         <Text>Theme</Text>
-        <ThemeButton type="button" onClick={() => setOpen(!open)}>
+        <ThemeButton open={open} type="button" onClick={() => setOpen(!open)}>
           {autoTheme ? 'Auto' : currentTheme}
         </ThemeButton>
         {open && (

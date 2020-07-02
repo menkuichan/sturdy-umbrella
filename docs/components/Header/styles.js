@@ -37,9 +37,8 @@ export const ThemeButton = styled.button`
     border-width: 0 1px 1px 0;
     display: inline-block;
     padding: 3px;
-    margin: 3px 10px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    margin: ${(props) => (props.open ? '0' : '3px')} 10px;
+    transform: ${(props) => (props.open ? 'rotate(-135deg)' : 'rotate(45deg)')};
   }
 `;
 
