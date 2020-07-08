@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const MdxContainer = styled.div`
-  margin-left: 5%;
-`;
+export const MdxContainer = styled.div``;
+
+export const MdxContent = styled.div``;
 
 export const AppContainer = styled.div`
   position: absolute;
@@ -26,5 +26,26 @@ export const LinkText = styled.a`
 
 export const MainContainer = styled.div`
   width: 100%;
-  padding: 40px 20% 0 10%;
+  margin-left: 5%;
+  padding: 40px 20% 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const FeedbackButton = styled.button`
+  background-color: ${(props) => props.theme.feedbackButton.backgroundColor};
+  box-shadow: 0 0 2px ${(props) => props.theme.feedbackButton.borderShadowColor};
+  border: none;
+  width: 150px;
+  height: 35px;
+  font-size: 14px;
+  border-radius: 2px;
+  margin: 50px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: ${(props) => props.theme.feedbackButton.textColor};
+
+  &:focus {
+    outline: 0;
+  }
 `;

@@ -30,4 +30,9 @@ export default {
     disabledBackgroundColor: '#eaeaea',
     disabledTextColor: '#B0B0B0',
   },
+  feedbackButton: {
+    textColor: '#2c2c2c',
+    backgroundColor: '#fafafa',
+    borderShadowColor: 'rgba(0, 0, 35, 0.5)',
+  },
 };

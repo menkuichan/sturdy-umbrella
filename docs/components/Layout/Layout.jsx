@@ -9,7 +9,14 @@ import lightTheme from '../../themes/light';
 import darkTheme from '../../themes/dark';
 import { getAutoTheme } from '../../utils';
 import { theme } from '../../../constants';
-import { MainContainer, AppContainer, MdxContainer, LinkText } from './styles';
+import {
+  MainContainer,
+  AppContainer,
+  MdxContainer,
+  MdxContent,
+  LinkText,
+  FeedbackButton,
+} from './styles';
 
 const Layout = ({ children }) => {
   const [currentTheme, setTheme] = useState(theme.dark);
@@ -56,14 +63,18 @@ const Layout = ({ children }) => {
           </Link>
         </SideMenu>
         <MainContainer>
-          <Header
-            onThemeChange={(type) => {
-              checkTheme(type);
-            }}
-            currentTheme={currentTheme}
-            autoTheme={autoTheme}
-          />
-          <MdxContainer>{children}</MdxContainer>
+          <MdxContainer>
+            <Header
+              onThemeChange={(type) => {
+                checkTheme(type);
+              }}
+              currentTheme={currentTheme}
+              autoTheme={autoTheme}
+            />
+
+            <MdxContent>{children}</MdxContent>
+          </MdxContainer>
+          <FeedbackButton>Leave feedback</FeedbackButton>
         </MainContainer>
       </AppContainer>
     </ThemeProvider>
